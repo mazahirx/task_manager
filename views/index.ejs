@@ -10,21 +10,23 @@
     <div class="main-screen min-w-screen min-h-screen bg-zinc-900 text-white">
         <div class="note-taking p-10">
         <form action="/create" method="post">
-            <input type="text" placeholder="Title" class="block w-full bg-zinc-700 rounded-md p-2 m-2 outline-none">
-            <textarea placeholder="Description goes here"class="block resize-none w-full bg-zinc-700 rounded-md p-2 m-2 outline-none"></textarea>
+            <input type="text" placeholder="Title" class="block w-full bg-zinc-700 rounded-md p-2 m-2 outline-none" name="title">
+            <textarea placeholder="Description goes here"class="block resize-none w-full bg-zinc-700 rounded-md p-2 m-2 outline-none" name="details"></textarea>
             <input type="submit" value="Take Note" class="block bg-amber-600 p-1 rounded-md m-2">
         </form>
         </div>
+        <div class="notepad-wraper flex">
         <% if(files.length > 0){ %>
             <% files.forEach(function(val){ %>
-            <div class="note bg-zinc-700 rounded-md p-6 m-11 max-w-100">
-                <h3 class="note-title text-lg font-bold">Note Title</h3>
-                <p class="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorem, sint quisquam vel quis ex?</p>
-            </div>
+                <div class="note bg-zinc-700 rounded-md p-6 m-11 max-w-100">
+                    <h3 class="note-title text-lg font-bold"><%= val %></h3>
+                    <p class="note-desc"></p>
+                </div>
            <% }) %>
            <% } else { %>
-                <h3 class="text-zinc-600">No Tasks Yet</h3>
+                <h3 class="text-zinc-600 m-11 p-2 text-lg">No Tasks Yet.</h3>
         <% } %>
+        </div>
     </div>
 </body>
 </html>
