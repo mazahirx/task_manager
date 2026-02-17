@@ -3,13 +3,13 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 
-app.get(express.json());
-app.get(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
-app.set(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/',(req,res) =>{
-    fs.readFile(`./files`, (err,files)=>{
+    fs.readdir(`./files`, (err,files)=>{
         console.log(files);
         res.render("index", {files:files});
     })
