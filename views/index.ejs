@@ -18,9 +18,9 @@
         <div class="notepad-wraper flex">
         <% if(files.length > 0){ %>
             <% files.forEach(function(val){ %>
-                <div class="note bg-zinc-700 rounded-md p-6 m-11 max-w-100">
+                <div class="note bg-zinc-700 rounded-md p-6 m-11 w-100">
                     <h3 class="note-title text-lg font-bold"><%= val %></h3>
-                    <p class="note-desc"></p>
+                    <a href="/show/<%= val %>" class="text-blue-300 underline">Read More</a>
                 </div>
            <% }) %>
            <% } else { %>
