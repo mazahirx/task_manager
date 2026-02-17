@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="main-screen min-w-screen min-h-screen bg-zinc-900 text-white">
+        <div class="note-taking p-10">
+        <form action="">
+            <input type="text" placeholder="Title" class="block w-full bg-zinc-700 rounded-md p-2 m-2 outline-none">
+            <textarea placeholder="Description goes here"class="block resize-none w-full bg-zinc-700 rounded-md p-2 m-2 outline-none"></textarea>
+            <input type="submit" value="Take Note" class="block bg-amber-600 p-1 rounded-md m-2">
+        </form>
+        </div>
+        <% if(files.length > 0){ %>
+            <% files.forEach(function(val){ %>
+            <div class="note bg-zinc-700 rounded-md p-6 m-11">
+                <h3 class="note-title text-lg font-bold">Note Title</h3>
+                <p class="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorem, sint quisquam vel quis ex?</p>
+            </div>
+           <% }) %>
+           <% } else { %>
+                <h3 class="text-zinc-600">No Tasks Yet</h3>
+        <% } %>
+        <div class="notes-wall w-200 flex">
+            <div class="note bg-zinc-700 rounded-md p-6 m-11">
+                <h3 class="note-title text-lg font-bold">Note Title</h3>
+                <p class="note-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorem, sint quisquam vel quis ex?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
