@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="main-screen min-w-screen min-h-screen bg-zinc-900 text-white p-10">
+        <a href="/" class="text-blue-300 underline">Back To Home</a>
+        <form action="/edit" method="post">
+            <input type="text" placeholder="Previous Title" class="block w-1/4 bg-zinc-700 rounded-md p-2 m-2 outline-none text-zinc-500" name="previous" value="<%= filename %>">
+            <input type="text" placeholder="New Title" class="block w-1/4 bg-zinc-700 rounded-md p-2 m-2 outline-none" name="new">
+            <input type="submit" value="Change Title" class="block bg-amber-600 p-1 rounded-md m-2">
+        </form>
+    </div>
+</body>
+</html>
