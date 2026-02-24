@@ -110,5 +110,5 @@ This project is open-source and available under the MIT License.
 
 ## Author
 
-**Your Name**
-Mazahir Mehdi | Full Stack Developer
+**Mazahir Mehdi**
+Computer Science Student | Full Stack Developer
