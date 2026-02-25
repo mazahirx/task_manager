@@ -19,7 +19,7 @@
         <% if(files.length > 0){ %>
             <% files.forEach(function(val){ %>
                 <div class="note bg-zinc-700 rounded-md p-6 m-11 w-100">
-                    <h3 class="note-title text-lg font-bold"><%= val %></h3>
+                    <h3 class="note-title text-lg font-bold"><%= val %></h3>    <!--Val stores the filetitle-->
                     <div class="flex justify-between">
                         <a href="/show/<%= val %>" class="text-blue-300 underline">Read More</a>
                         <a href="/edit/<%= val %>" class="text-blue-300 underline">Edit</a>
